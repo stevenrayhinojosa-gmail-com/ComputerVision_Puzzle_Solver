@@ -1,0 +1,27 @@
+#In this problem, you are given a set of JPEG puzzle pieces and you are required to write a
+program to solve (reconstruct)the puzzle. The coordinate of each piece is indicated by the
+number of red and blue dots in the piece. The number of red dots denotes the column index,
+while the number of blue dots denotes the row index of the puzzle. For example, a piece
+with 1 RED and 2 BLUE dots indicate that the piece is located at column 1 and row 2 of the
+puzzle (full image), as shown in Fig.1.#
+
+
+from PIL import Image
+file = "C://Users/steve/Downloads/r1XS2e4wDayjukgm.jpg"
+img = Image.open(file)
+img.save(file)
+img.show(file)
+type(img)
+img.size
+img.filename
+img.format_description
+x = 140
+y = 20
+
+w = 180
+h = 200
+
+img.crop((x,y,w,h))
+img.paste(im=dots,box=(0,0))
+img
+
